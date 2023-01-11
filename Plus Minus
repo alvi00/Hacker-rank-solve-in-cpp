@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   int m;float z=0.0,p=0.0,n=0.0;
+   cin>>m;
+   int arr[m];
+   for(int i=0;i<m;i++)
+   {
+      cin>>arr[i];
+   }
+   for(int i=0;i<m;i++)
+   {
+      if(arr[i]==0)
+      {
+         z++;
+      }
+      else if(arr[i]>0)
+      {
+         p++;
+      }
+      else
+      {
+         n++;
+      }
+   }
+   cout<<p/m<<endl;
+   cout<<n/m<<endl;
+   cout<<z/m<<endl;
+}
