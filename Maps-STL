@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+map<string,int>alvi;
+int main() 
+{
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        int a;string b;
+        cin>>a;
+        if(a==1)
+        {
+            int x;
+            cin>>b>>x;
+            alvi[b]=alvi[b]+x;
+        }
+        else if(a==2)
+        {
+            cin>>b;
+            alvi.erase(b);
+        }
+        else
+        {
+            cin>>b;
+            map<string,int>::iterator itr=alvi.find(b);
+            if(itr!=alvi.end())
+            {
+                cout<<alvi[b]<<endl;
+            }
+            else
+            {
+                cout<<0<<endl;
+            }
+
+        }
+
+    }
+    return 0;
+}
